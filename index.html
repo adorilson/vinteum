@@ -1,0 +1,40 @@
+<html>
+<head>
+<script language="javascript" src="carta.js"></script>
+<script language="javascript" src="jogador.js"></script>
+<script language="javascript" src="banqueiro.js"></script>
+<script type="text/javascript">
+
+var jogo;
+function iniciar ()
+{
+	jogo = new VinteUm();
+	jogo.iniciar();
+}
+
+window.onload = iniciar;
+
+</script>
+</head>
+<body>
+
+<div>
+<strong>Cartas:</strong> <div id="tblD"> </div>
+<strong>Pontos do banqueiro:</strong> <div id="sumD">0</div>
+</div>
+
+<hr>
+
+<div>
+<strong>Cartas:</strong> <div id="tblP"> </div>
+<strong>Pontos do jogador:</strong> <div id="sumP">0</div>
+</div>
+
+<div>
+<input type="button" value="Puxar" onClick="jogo.jogadorPuxaCarta();">
+<input type="button" value="Banqueiro Puxa" onClick="jogo.mesa();">
+<input type="button" value="Iniciar" onClick="jogo.iniciar();">
+</div>
+
+</body>
+</html>
